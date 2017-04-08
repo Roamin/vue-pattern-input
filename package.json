@@ -2,7 +2,7 @@
   "name": "vue-pattern-input",
   "version": "0.0.1",
   "description": "A Vue2.0 Component for limiting user input",
-  "main": "src/LimitedInput.vue",
+  "main": "src/component/vue-pattern-input.vue",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js"
