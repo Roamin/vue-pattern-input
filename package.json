@@ -14,7 +14,9 @@
   "keywords": [
     "vue",
     "input",
-    "limited"
+    "limited",
+    "pattern",
+    "RegExp"
   ],
   "author": "Live",
   "license": "MIT",
