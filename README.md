@@ -53,8 +53,9 @@ vue-pattern-input/
 
 ## Quick start
 
+#### Parameter declaration
+
 ```
-// JavaScript Part
 /**
  * Component Settings
  * @param  {String} pattern     Using for: RegExp(pattern[, flags])
@@ -64,6 +65,10 @@ vue-pattern-input/
  * @param  {String\Number} val  For v-model
  * @return {String}             
  */
+```
+
+#### Vue script
+```
 setting: {
   pattern: '^[0\\D]*|\\D*', // Match string that doen't belong to the positive integer
   flags: 'g',
@@ -71,8 +76,10 @@ setting: {
   placeholder: 'Oh, try out',
   val: '223'
 }
+```
 
-// HTML Part
+#### Vue template
+```
 <pattern-input class="your-class-name"
                :pattern="setting.pattern"
                :flags="setting.flags"
