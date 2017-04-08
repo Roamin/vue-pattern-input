@@ -61,7 +61,6 @@ vue-pattern-input/
  * @param  {String} pattern     Using for: RegExp(pattern[, flags])
  * @param  {String} flags       Using for: RegExp(pattern[, flags])
  * @param  {String} replacement Using for: String.prototype.replace(regexp, replacement)
- * ~~@param  {String} placeholder The placeholder of the input~~
  * @param  {String\Number} val  For v-model
  * @return {String}             
  */
