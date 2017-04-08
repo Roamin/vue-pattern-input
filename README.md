@@ -61,7 +61,7 @@ vue-pattern-input/
  * @param  {String} pattern     Using for: RegExp(pattern[, flags])
  * @param  {String} flags       Using for: RegExp(pattern[, flags])
  * @param  {String} replacement Using for: String.prototype.replace(regexp, replacement)
- * @param  {String} placeholder The placeholder of the input
+ * ~~@param  {String} placeholder The placeholder of the input~~
  * @param  {String\Number} val  For v-model
  * @return {String}             
  */
@@ -73,7 +73,6 @@ setting: {
   pattern: '^[0\\D]*|\\D*', // Match string that doen't belong to the positive integer
   flags: 'g',
   replacement: '',
-  placeholder: 'Oh, try out',
   val: '223'
 }
 ```
@@ -84,7 +83,6 @@ setting: {
                :pattern="setting.pattern"
                :flags="setting.flags"
                :replacement="setting.replacement"
-               :placeholder="setting.placeholder"
                v-model="setting.val"></pattern-input>
 ```
 
