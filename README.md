@@ -42,11 +42,13 @@ Within the download you'll find the following directories and files, logically g
 ```
 vue-pattern-input/
 ├── ...
-└── src/
-    ├── /component
-    │   └── pattern-input.vue
-    └── /js
-       └── ... demo ...
+├── src/
+│   ├── /component
+│   │   └── pattern-input.vue
+│   └── /js
+│      └── ... demo ...
+└── /view
+    └── demo.html
 ```
 
 ## Quick start

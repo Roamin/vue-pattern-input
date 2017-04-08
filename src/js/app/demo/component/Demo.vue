@@ -5,7 +5,7 @@
       <div class="form-horizontal">
         <div class="form-group">
           <div class="col-sm-12">
-            <div class="alert alert-info"><i class="glyphicon glyphicon-cog mr5"></i>Custom Quick Settings</div>
+            <div class="alert alert-info"><i class="glyphicon glyphicon-cog mr5"></i>Click the flow buttons to custom quickly</div>
           </div>
         </div>
 
