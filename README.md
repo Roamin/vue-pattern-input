@@ -4,14 +4,14 @@ A Vue2.0 Component used RegExp to limit the user's input, and works like native 
 
 ## Table of contents
 
-- [Demo Build Setup](#Demo Build Setup)
-- [Live Demo](#Live Demo)
+- [Demo build setup](#demo-build-setup)
+- [Live Demo](#live-demo)
 - [What's included](#whats-included)
-- [Quick start](#Quick start)
+- [Quick start](#quick-start)
 - [Bugs and feature requests](#bugs-and-feature-requests)
-- [License](#License)
+- [License](#license)
 
-## Demo Build Setup
+## Demo build setup
 
 ``` bash
 # install dependencies
@@ -31,9 +31,9 @@ npm run build --report
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-## Live Demo
+## Live demo
 
-Just click [Live Demo](http://htmlpreview.github.io/?https://github.com/RoamIn/vue-pattern-input/blob/master/view/demo.html).
+Just click there: [Live Demo](http://htmlpreview.github.io/?https://github.com/RoamIn/vue-pattern-input/blob/master/view/demo.html).
 
 ## What's included
 
