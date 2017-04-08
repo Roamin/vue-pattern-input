@@ -83,7 +83,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import PatternInput from '../../../../component/pattern-input.vue';
+  import PatternInput from '../../../../component/vue-pattern-input.vue';
 
   export default {
     components: {

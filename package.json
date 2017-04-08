@@ -1,6 +1,6 @@
 {
   "name": "vue-pattern-input",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Vue2.0 Component for limiting user input",
   "main": "src/component/vue-pattern-input.vue",
   "scripts": {
@@ -14,7 +14,6 @@
   "keywords": [
     "vue",
     "input",
-    "limited",
     "pattern",
     "RegExp"
   ],
