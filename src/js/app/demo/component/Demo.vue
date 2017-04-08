@@ -66,11 +66,10 @@
 
         <div class="form-group">
           <div class="col-sm-12">
-            <pattern-input class="form-control"
+            <pattern-input class="form-control" maxlength="10" placeholder="maxlength 10"
                            :pattern="setting.pattern"
                            :flags="setting.flags"
                            :replacement="setting.replacement"
-                           :placeholder="setting.placeholder"
                            v-model="setting.val"></pattern-input>
           </div>
         </div>
@@ -95,7 +94,6 @@
           pattern: '^[0\\D]*|\\D*',
           flags: 'g',
           replacement: '',
-          placeholder: 'Oh, try out',
           val: ''
         },
         quickSettings: [

@@ -1,6 +1,5 @@
 <template>
   <input :value="value"
-         :placeholder="placeholder"
          @input="updateValue($event.target.value)"
          v-model="val"
          ref="input">
@@ -16,10 +15,6 @@
       value: {
         required: true,
         type: [Number, String]
-      },
-      placeholder: {
-        type: String,
-        default: ''
       },
       // Using for: RegExp(pattern[, flags])
       pattern: {
