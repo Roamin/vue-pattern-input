@@ -11,6 +11,7 @@ function htmlPlugins(prod) {
   return ejsTemplates.map(function (file) {
     var filename = path.relative('./ejs/',file).split('.')[0];
     var option={
+      prod: prod,
       filename: path.resolve(__dirname, '../view/' + filename + '.html'),
       template: file,
       inject:false,

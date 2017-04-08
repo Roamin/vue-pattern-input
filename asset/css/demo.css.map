@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/js/app/demo/component/Demo.vue"],"names":[],"mappings":"AACA,0CACE,eAAiB","file":"asset/css/demo.css","sourcesContent":["\n.setting-group .btn + .btn[data-v-23c8b5f6] {\n  margin-left: 5px;\n}\n\n\n\n// WEBPACK FOOTER //\n// ./src/js/app/demo/component/Demo.vue"],"sourceRoot":""}
