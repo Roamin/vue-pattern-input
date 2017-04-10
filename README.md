@@ -35,6 +35,8 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 Just click there: [Live Demo](http://htmlpreview.github.io/?https://github.com/RoamIn/vue-pattern-input/blob/master/view/demo.html).
 
+![demo.gif](./src/img/demo.gif)
+
 ## What's included
 
 Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
@@ -55,7 +57,7 @@ vue-pattern-input/
 
 #### Parameter declaration
 
-```
+```javascript
 /**
  * Component Settings
  * @param  {String} pattern     Using for: RegExp(pattern[, flags])
@@ -67,7 +69,8 @@ vue-pattern-input/
 ```
 
 #### Vue script
-```
+
+```javascript
 setting: {
   pattern: '^[0\\D]*|\\D*', // Match string that doen't belong to the positive integer
   flags: 'g',
@@ -77,7 +80,8 @@ setting: {
 ```
 
 #### Vue template
-```
+
+```html
 <pattern-input class="your-class-name"
                :pattern="setting.pattern"
                :flags="setting.flags"
