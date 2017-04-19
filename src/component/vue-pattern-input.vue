@@ -52,7 +52,7 @@
     methods: {
       // format the value of input
       formatValue (val) {
-        let formattedValue = val.replace(this.regExp, this.replacement);
+        let formattedValue = val.toString().replace(this.regExp, this.replacement);
 
         return formattedValue;
       },
