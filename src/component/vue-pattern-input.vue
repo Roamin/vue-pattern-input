@@ -10,7 +10,7 @@
     mounted () {
       this.updateValue(this.value);
     },
-    name: 'vue-attern-input',
+    name: 'vue-pattern-input',
     props: {
       value: {
         required: true,
