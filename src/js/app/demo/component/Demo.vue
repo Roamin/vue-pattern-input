@@ -3,13 +3,13 @@
         <div class="col-md-6 col-md-offset-3 mt20">
 
             <div class="form-horizontal">
+
                 <div class="form-group">
                     <div class="col-sm-12">
                         <div class="alert alert-info"><i class="glyphicon glyphicon-cog mr5"></i>Click the flow buttons to custom quickly
                         </div>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <div class="col-sm-12 setting-group">
                         <button type="button" class="btn btn-sm btn-default"
@@ -20,15 +20,14 @@
                     </div>
                 </div>
 
-                <hr>
+                <hr class="dashed mt-30 mb-30">
 
                 <div class="form-group">
                     <div class="col-sm-12">
-                        <div class="alert alert-info"><i class="glyphicon glyphicon-pencil mr5"></i>Custom Settings
+                        <div class="alert alert-info"><i class="glyphicon glyphicon-pencil mr5"></i>Custom Settings (Just as RegExp)
                         </div>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <div class="col-sm-6">
                         <div class="input-group">
@@ -38,7 +37,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <div class="col-sm-6">
                         <div class="input-group">
@@ -48,7 +46,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <div class="col-sm-6">
                         <div class="input-group">
@@ -60,7 +57,7 @@
                     </div>
                 </div>
 
-                <hr>
+                <hr class="dashed mt-30 mb-30">
 
                 <div class="form-group">
                     <div class="col-sm-12">
@@ -68,17 +65,17 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <div class="col-sm-12">
                         <pattern-input class="form-control" maxlength="10" placeholder="maxlength 10"
                                        :pattern="setting.pattern"
                                        :flags="setting.flags"
                                        :replacement="setting.replacement"
+                                       @input="handleInput"
+                                       @change="handleChange"
                                        v-model="setting.val"></pattern-input>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <div class="col-sm-12">
                         <button type="button" class="btn btn-danger" @click="clearInput">clear input</button>
@@ -86,7 +83,6 @@
                 </div>
 
             </div>
-
 
         </div>
     </div>
@@ -105,7 +101,7 @@
                     pattern: '^[0\\D]*|\\D*',
                     flags: 'g',
                     replacement: '',
-                    val: ''
+                    val: 'awdawd123'
                 },
                 quickSettings: [
                     {
@@ -121,6 +117,13 @@
                         flags: 'g',
                         replacement: '',
                         selected: true
+                    },
+                    {
+                        name: 'Lowercase',
+                        pattern: '[^a-z]',
+                        flags: 'g',
+                        replacement: '',
+                        selected: false
                     }
                 ]
             };
@@ -132,6 +135,7 @@
                 this.setting.replacement = oSetting.replacement;
 
                 this.setSelectedStatus(nIndex);
+                this.clearInput();
             },
             setSelectedStatus (nIndex) {
                 this.quickSettings.map((setting, index) => {
@@ -146,6 +150,12 @@
             },
             clearInput() {
                 this.setting.val = '';
+            },
+            handleInput(val) {
+                console.log(`input: ${ val }`);
+            },
+            handleChange(val) {
+                console.log(`change: ${ val }`);
             }
         }
     }
@@ -156,5 +166,17 @@
         .btn + .btn {
             margin-left: 5px;
         }
+    }
+
+    .dashed {
+        border-style: dashed;
+    }
+
+    .mt-30 {
+        margin-top: 30px;
+    }
+
+    .mb-30 {
+        margin-bottom: 30px;
     }
 </style>

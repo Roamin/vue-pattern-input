@@ -1,6 +1,7 @@
 <template>
     <input :value="value"
            @input="updateValue($event.target.value)"
+           @change="emitChange"
            v-model="val"
            ref="input">
 </template>
@@ -56,12 +57,23 @@
 
                 return formattedValue;
             },
+
             // update the value of input
             updateValue(val) {
                 const formattedValue = this.formatValue(val);
 
                 this.val = formattedValue;
-                this.$emit('input', formattedValue);
+                this.emitInput(formattedValue);
+            },
+
+            // emit input event
+            emitInput(val) {
+                this.$emit('input', val);
+            },
+
+            // emit change event
+            emitChange() {
+                this.$emit('change', this.val);
             }
         },
         watch: {
@@ -74,5 +86,4 @@
 </script>
 
 <style>
-
 </style>

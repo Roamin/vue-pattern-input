@@ -9,6 +9,7 @@ A Vue2.0 Component used RegExp to limit the user's input, and works like native 
 - [What's included](#whats-included)
 - [Quick start](#quick-start)
 - [Bugs and feature requests](#bugs-and-feature-requests)
+- [Thought](#thought)
 - [License](#license)
 
 ## Demo build setup
@@ -86,6 +87,8 @@ setting: {
                :pattern="setting.pattern"
                :flags="setting.flags"
                :replacement="setting.replacement"
+               @input="handleInput"
+               @change="handleChange"
                v-model="setting.val"></pattern-input>
 ```
 
@@ -94,6 +97,15 @@ setting: {
 ## Bugs and feature requests
 
 Have a bug or a feature request? If your problem or idea is not addressed yet, [please open a new issue](https://github.com/RoamIn/vue-pattern-input/issues/new).
+
+## Thought
+
+I'm not sure is it necessary to emit all input events. Now I only emit `input` and `change` events.
+
+And I think the RegExp settings is not good enough, it's a bit awkward. Maybe I should match what I want instead of replacing what I don't want.
+
+When I want to limit number range, it not convenient. In this condition, maybe a number-input will be a good solution.
+
 
 ## License
 
