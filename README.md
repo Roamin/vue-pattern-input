@@ -100,11 +100,11 @@ Have a bug or a feature request? If your problem or idea is not addressed yet, [
 
 ## Thought
 
-I'm not sure is it necessary to emit all input events. Now I only emit `input` and `change` events.
+I'm not sure is it necessary to emit all the input events. Now I only emit `input` and `change` events.
 
 And I think the RegExp settings is not good enough, it's a bit awkward. Maybe I should match what I want instead of replacing what I don't want.
 
-When I want to limit number range, it not convenient. In this condition, maybe a number-input will be a good solution.
+When I want to limit number range, it not convenient. In this condition, maybe create a number-input will be a good solution.
 
 
 ## License
