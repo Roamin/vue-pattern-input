@@ -4,14 +4,14 @@ A Vue2.0 Component used RegExp to limit the user's input, and works like native 
 
 ## Table of contents
 
-- [Demo Build Setup](#Demo Build Setup)
-- [Live Demo](#Live Demo)
+- [Demo build setup](#demo-build-setup)
+- [Live Demo](#live-demo)
 - [What's included](#whats-included)
-- [Quick start](#Quick start)
+- [Quick start](#quick-start)
 - [Bugs and feature requests](#bugs-and-feature-requests)
-- [License](#License)
+- [License](#license)
 
-## Demo Build Setup
+## Demo build setup
 
 ``` bash
 # install dependencies
@@ -31,9 +31,11 @@ npm run build --report
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-## Live Demo
+## Live demo
 
-Just click [Live Demo](http://htmlpreview.github.io/?https://github.com/RoamIn/vue-pattern-input/blob/master/view/demo.html).
+Just click there: [Live Demo](http://htmlpreview.github.io/?https://github.com/RoamIn/vue-pattern-input/blob/master/view/demo.html).
+
+![demo.gif](./src/img/demo.gif)
 
 ## What's included
 
@@ -42,40 +44,50 @@ Within the download you'll find the following directories and files, logically g
 ```
 vue-pattern-input/
 ├── ...
-└── src/
-    ├── /component
-    │   └── pattern-input.vue
-    └── /js
-       └── ... demo ...
+├── src/
+│   ├── /component
+│   │   └── pattern-input.vue
+│   └── /js
+│      └── ... demo ...
+└── /view
+    └── demo.html
 ```
 
 ## Quick start
 
-```
-// JavaScript Part
+#### Parameter declaration
+
+```javascript
 /**
  * Component Settings
  * @param  {String} pattern     Using for: RegExp(pattern[, flags])
  * @param  {String} flags       Using for: RegExp(pattern[, flags])
  * @param  {String} replacement Using for: String.prototype.replace(regexp, replacement)
- * @param  {String} placeholder The placeholder of the input
  * @param  {String\Number} val  For v-model
  * @return {String}             
  */
+```
+
+#### Vue script
+
+```javascript
 setting: {
   pattern: '^[0\\D]*|\\D*', // Match string that doen't belong to the positive integer
   flags: 'g',
   replacement: '',
-  placeholder: 'Oh, try out',
   val: '223'
 }
+```
 
-// HTML Part
+#### Vue template
+
+```html
 <pattern-input class="your-class-name"
                :pattern="setting.pattern"
                :flags="setting.flags"
                :replacement="setting.replacement"
-               :placeholder="setting.placeholder"
+               @input="handleInput"
+               @change="handleChange"
                v-model="setting.val"></pattern-input>
 ```
 
@@ -84,6 +96,15 @@ setting: {
 ## Bugs and feature requests
 
 Have a bug or a feature request? If your problem or idea is not addressed yet, [please open a new issue](https://github.com/RoamIn/vue-pattern-input/issues/new).
+
+## Think
+
+I'm not sure is it necessary to emit all input events. Now I only emit `input` and `change` events.
+
+And I think the RegExp settings is not good enough, it's a bit awkward. Maybe I should match what I want instead of replacing what I don't want.
+
+When I want to limit number range, it not convenient. In this condition, maybe a number-input will be a good solution.
+
 
 ## License
 
