@@ -7,7 +7,7 @@ A Vue2.0 Component used RegExp to limit the user's input, and works like native 
 - [Demo build setup](#demo-build-setup)
 - [Live Demo](#live-demo)
 - [What's included](#whats-included)
-- [Parameter declaration](#Parameter-declaration)
+- [Parameter declaration](#parameter-declaration)
 - [Quick start](#quick-start)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Thought](#thought)
