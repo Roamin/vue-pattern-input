@@ -87,7 +87,9 @@ setting: {
                v-model.number="setting.val"></pattern-input>
 ```
 
-> This setting will make user input positive integer only.(When you want get a Number, remember use `v-model.number`, and the safe maxlength is 15)
+> This setting will make user input positive integer only.
+
+> When you want get a Number, remember use `v-model.number`, and the safe maxlength is 15.
 
 ## Bugs and feature requests
 
@@ -99,7 +101,7 @@ I'm not sure is it necessary to emit all the input events. Now I only emit `inpu
 
 And I think the RegExp settings is not good enough, it's a bit awkward. Maybe I should match what I want instead of replacing what I don't want.
 
-When I want to limit number range, it not convenient. In this condition, maybe create a number-input will be a good solution.
+When I want to limit number range, it not convenient. In this condition, maybe create a [number-input](https://github.com/RoamIn/vue-custom-input) will be a good solution.
 
 
 ## License
