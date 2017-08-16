@@ -70,7 +70,7 @@ v-model[.number] | String/Number | | true | Using for getting input value
 
 ```javascript
 setting: {
-  regExp: /^[0\D]*|\D*/g, // Match character that doesn't belong to the positive integer
+  regExp: /^[0\D]*|\D*/g, // Match any character that doesn't belong to the positive integer
   replacement: '',
   val: '223'
 }
@@ -99,7 +99,7 @@ Have a bug or a feature request? If your problem or idea is not addressed yet, [
 
 I'm not sure is it necessary to emit all the input events. Now I only emit `input` and `change` events.
 
-And I think the RegExp settings is not good enough, it's a bit awkward. Maybe I should match what I want instead of replacing what I don't want.
+And I think the RegExp settings is not good enough, it's a bit awkward. Maybe I should match what I want instead of replacing what I don't want. But how ?
 
 When I want to limit number range, it not convenient. In this condition, maybe create a [number-input](https://github.com/RoamIn/vue-custom-input) will be a good solution.
 
