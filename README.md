@@ -7,6 +7,7 @@ A Vue2.0 Component used RegExp to limit the user's input, and works like native 
 - [Demo build setup](#demo-build-setup)
 - [Live Demo](#live-demo)
 - [What's included](#whats-included)
+- [Parameter declaration](#Parameter-declaration)
 - [Quick start](#quick-start)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Thought](#thought)
@@ -47,40 +48,35 @@ vue-pattern-input/
 ├── ...
 ├── src/
 │   ├── /component
-│   │   └── pattern-input.vue
+│   │   └── pattern-input.vue // core
 │   └── /js
 │      └── ... demo ...
 └── /view
     └── demo.html
 ```
 
+## Parameter declaration
+
+
+Parameter|Type|Default|Required|Description
+--- | --- | --- | --- | --- |
+regExp | RegExp | null | false | Using for: String.prototype.replace(regexp, replacement)
+replacement | String | '' | false | Using for: String.prototype.replace(regexp, replacement)
+val | String/Number | | true | Using for: v-model
+
 ## Quick start
 
-#### Parameter declaration
-
-```javascript
-/**
- * Component Settings
- * @param  {String} pattern     Using for: RegExp(pattern[, flags])
- * @param  {String} flags       Using for: RegExp(pattern[, flags])
- * @param  {String} replacement Using for: String.prototype.replace(regexp, replacement)
- * @param  {String\Number} val  For v-model
- * @return {String}             
- */
-```
-
-#### Vue script
+#### JavaScript
 
 ```javascript
 setting: {
-  pattern: '^[0\\D]*|\\D*', // Match string that doen't belong to the positive integer
-  flags: 'g',
+  regExp: /^[0\D]*|\D*/g, // Match character that doesn't belong to the positive integer
   replacement: '',
   val: '223'
 }
 ```
 
-#### Vue template
+#### HTML
 
 ```html
 <pattern-input class="your-class-name"

@@ -24,35 +24,9 @@
 
                 <div class="form-group">
                     <div class="col-sm-12">
-                        <div class="alert alert-info"><i class="glyphicon glyphicon-pencil mr5"></i>Custom Settings (Just as RegExp)
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-6">
-                        <div class="input-group">
-                            <span class="input-group-addon">RegExp Pattern</span>
-                            <input type="text" class="form-control"
-                                   v-model="setting.pattern">
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-6">
-                        <div class="input-group">
-                            <span class="input-group-addon">RegExp Flags</span>
-                            <input type="text" class="form-control"
-                                   v-model="setting.flags">
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-6">
-                        <div class="input-group">
-                            <span class="input-group-addon">Replacement</span>
-                            <input type="text" class="form-control"
-                                   :disabled="setting.pattern === ''"
-                                   v-model="setting.replacement">
+                        <div class="input-group pre" v-for="(v, k) in setting">
+                            <span class="input-group-addon">{{ k }}:</span>
+                            <input class="form-control" type="text" readonly v-model="setting[k]">
                         </div>
                     </div>
                 </div>
@@ -68,8 +42,7 @@
                 <div class="form-group">
                     <div class="col-sm-12">
                         <pattern-input class="form-control" maxlength="10" placeholder="maxlength 10"
-                                       :pattern="setting.pattern"
-                                       :flags="setting.flags"
+                                       :regExp="setting.regExp"
                                        :replacement="setting.replacement"
                                        @input="handleInput"
                                        @change="handleChange"
@@ -98,30 +71,32 @@
         data () {
             return {
                 setting: {
-                    pattern: '^[0\\D]*|\\D*',
-                    flags: 'g',
+                    regExp: /^[0\D]*|\D*/g,
                     replacement: '',
                     val: 'awdawd123'
                 },
                 quickSettings: [
                     {
                         name: 'Noting',
-                        pattern: '',
-                        flags: '',
+                        regExp: null,
                         replacement: '',
                         selected: false
                     },
                     {
                         name: 'Positive Integer',
-                        pattern: '^[0\\D]*|\\D*',
-                        flags: 'g',
+                        regExp: /^[0\D]*|\D*/g,
                         replacement: '',
                         selected: true
                     },
                     {
                         name: 'Lowercase',
-                        pattern: '[^a-z]',
-                        flags: 'g',
+                        regExp: /[^a-z]/g,
+                        replacement: '',
+                        selected: false
+                    },
+                    {
+                        name: 'Chinese',
+                        regExp: /[^\u4e00-\u9fa5]/g,
                         replacement: '',
                         selected: false
                     }
@@ -130,8 +105,7 @@
         },
         methods: {
             set (oSetting, nIndex) {
-                this.setting.pattern = oSetting.pattern;
-                this.setting.flags = oSetting.flags;
+                this.setting.regExp = oSetting.regExp;
                 this.setting.replacement = oSetting.replacement;
 
                 this.setSelectedStatus(nIndex);
@@ -156,6 +130,13 @@
             },
             handleChange(val) {
                 console.log(`change: ${ val }`);
+            },
+            regExpToString(k, v) {
+                if (v instanceof RegExp) {
+                    return v.toString();
+                }
+
+                return v;
             }
         }
     }
@@ -178,5 +159,20 @@
 
     .mb-30 {
         margin-bottom: 30px;
+    }
+
+    .pre {
+        font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+
+        .input-group-addon {
+            border: none;
+            border-radius: 0;
+        }
+
+        input {
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+        }
     }
 </style>

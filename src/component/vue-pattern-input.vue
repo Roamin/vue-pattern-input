@@ -17,15 +17,10 @@
                 required: true,
                 type: [Number, String]
             },
-            // Using for: RegExp(pattern[, flags])
-            pattern: {
-                type: String,
-                default: ''
-            },
-            // Using for: RegExp(pattern[, flags])
-            flags: {
-                type: String,
-                default: 'g'
+            // Using for: String.prototype.replace(regexp, replacement)
+            regExp: {
+                type: RegExp,
+                default: null
             },
             // Using for: String.prototype.replace(regexp, replacement)
             replacement: {
@@ -37,18 +32,6 @@
             return {
                 val: ''
             };
-        },
-        computed: {
-            // Using for: String.prototype.replace(regexp, newSubstr)
-            regExp() {
-                let regExp = '';
-
-                if (this.pattern !== '') {
-                    regExp = new RegExp(this.pattern, this.flags);
-                }
-
-                return regExp;
-            }
         },
         methods: {
             // format the value of input
