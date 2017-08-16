@@ -62,7 +62,7 @@ Parameter|Type|Default|Required|Description
 --- | --- | --- | --- | --- |
 regExp | RegExp | null | false | Using for: String.prototype.replace(regexp, replacement)
 replacement | String | '' | false | Using for: String.prototype.replace(regexp, replacement)
-val | String/Number | | true | Using for: v-model
+v-model[.number] | String/Number | | true | Using for getting input value
 
 ## Quick start
 
@@ -80,15 +80,14 @@ setting: {
 
 ```html
 <pattern-input class="your-class-name"
-               :pattern="setting.pattern"
-               :flags="setting.flags"
+               :regExp="setting.regExp"
                :replacement="setting.replacement"
                @input="handleInput"
                @change="handleChange"
-               v-model="setting.val"></pattern-input>
+               v-model.number="setting.val"></pattern-input>
 ```
 
-> This setting will make user input positive integer only.
+> This setting will make user input positive integer only.(When you want get a Number, remember use `v-model.number`, and the safe maxlength is 15)
 
 ## Bugs and feature requests
 
