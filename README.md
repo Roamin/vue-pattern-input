@@ -1,6 +1,8 @@
 # vue-pattern-input
 
-A Vue2.0 Component used RegExp to limit the user's input, and works like native input element. You can use `v-model` easily.
+A Vue2.0 Component used RegExp to limit the user's input.
+
+Works like native input element, you can add `maxlength` `class` attributes. You can use `v-model` too.
 
 ## Table of contents
 
