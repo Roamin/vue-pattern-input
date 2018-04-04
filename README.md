@@ -71,7 +71,7 @@ v-model[.number] | String/Number | | true | Using for getting input value
 
 regExp|Description
 --- | --- |
-/^[0\D]*|\D*/g | positive integer
+/^[0\D]\*\|\D*/g | positive integer
 /[^a-z]/g | lowercase
 /[^A-Z]/g | uppercase
 /[^\w]/g | \w, Equivalent to [A-Za-z0-9_]
