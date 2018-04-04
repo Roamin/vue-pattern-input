@@ -10,6 +10,7 @@ Works like native input element, you can add `maxlength` `class` attributes. You
 - [Live Demo](#live-demo)
 - [What's included](#whats-included)
 - [Parameter declaration](#parameter-declaration)
+- [Parameter declaration](#parameter-declaration)
 - [Quick start](#quick-start)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Thought](#thought)
@@ -65,6 +66,17 @@ Parameter|Type|Default|Required|Description
 regExp | RegExp | null | false | Using for: String.prototype.replace(regexp, replacement)
 replacement | String | '' | false | Using for: String.prototype.replace(regexp, replacement)
 v-model[.number] | String/Number | | true | Using for getting input value
+
+## Commonly used regExp 
+
+regExp|Description
+--- | --- |
+/^[0\D]*|\D*/g | positive integer
+/[^a-z]/g | lowercase
+/[^A-Z]/g | uppercase
+/[^\w]/g | \w, Equivalent to [A-Za-z0-9_]
+/[^\u4e00-\u9fa5]/g | Chinese
+
 
 ## Quick start
 

@@ -95,6 +95,18 @@
                         selected: false
                     },
                     {
+                        name: 'Uppercase',
+                        regExp: /[^A-Z]/g,
+                        replacement: '',
+                        selected: false
+                    },
+                    {
+                        name: '[A-Za-z0-9_]',
+                        regExp: /[^\w]/g,
+                        replacement: '',
+                        selected: false
+                    },
+                    {
                         name: 'Chinese',
                         regExp: /[^\u4e00-\u9fa5]/g,
                         replacement: '',

@@ -1,6 +1,5 @@
 <template>
-    <input :value="value"
-           @input="updateValue($event.target.value)"
+    <input @input="updateValue($event.target.value)"
            @change="emitChange"
            v-model="val"
            ref="input">
@@ -62,7 +61,9 @@
         watch: {
             // watch value prop
             value(val) {
-                this.updateValue(val);
+                if (val !== this.val) {
+                    this.updateValue(val)
+                }
             }
         }
     }
