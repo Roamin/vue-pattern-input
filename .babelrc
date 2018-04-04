@@ -1,16 +1,12 @@
 {
   "presets": [
-    ["latest", {
-      "es2015": { "modules": false }
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+      }
     }],
     "stage-2"
   ],
-  "plugins": ["transform-runtime"],
-  "comments": false,
-  "env": {
-    "test": {
-      "presets": ["latest", "stage-2"],
-      "plugins": [ "istanbul" ]
-    }
-  }
+  "plugins": ["transform-vue-jsx", "transform-runtime"]
 }
