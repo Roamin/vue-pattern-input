@@ -29,10 +29,8 @@ Within the download you'll find the following directories and files, logically g
 vue-pattern-input/
 ├── ...
 ├── src/
-│   ├── /component
-│   │   └── pattern-input.vue // core
-│   └── /js
-│      └── ... demo ...
+│   └── /component
+│       └── pattern-input.vue // core
 └── /view
     └── demo.html
 ```
