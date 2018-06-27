@@ -6,7 +6,6 @@ Works like native input element, you can add `maxlength` `class` attributes. You
 
 ## Table of contents
 
-- [Demo build setup](#demo-build-setup)
 - [Live Demo](#live-demo)
 - [What's included](#whats-included)
 - [Parameter declaration](#parameter-declaration)
@@ -15,26 +14,6 @@ Works like native input element, you can add `maxlength` `class` attributes. You
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Thought](#thought)
 - [License](#license)
-
-## Demo build setup
-
-``` bash
-# install dependencies
-npm install
-or
-cnpm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## Live demo
 
