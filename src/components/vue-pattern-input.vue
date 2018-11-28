@@ -41,12 +41,11 @@ export default {
         }
       })
 
-      return {
-        ...listeners,
+      return Object.assign(listeners, {
         input: (e) => {
           this.updateValue(e.target.value)
         }
-      }
+      })
     }
   },
   methods: {
