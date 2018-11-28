@@ -11,6 +11,7 @@ Works like native input element, you can add `maxlength` `class` attributes. You
 - [Parameter declaration](#parameter-declaration)
 - [Parameter declaration](#parameter-declaration)
 - [Quick start](#quick-start)
+- [Changelog](#changelog)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Thought](#thought)
 - [License](#license)
@@ -85,11 +86,20 @@ setting: {
 
 ## Changelog
 
-- v2.1.3
-    ~~I'm not sure is it necessary to emit all the input events. Now I only emit `input` and `change` events.~~
-    Now, you can bind any native event on input !
-    Required:
-    - Vue: v2.4.0+
+### v2.1.3
+- ~~I'm not sure is it necessary to emit all the input events. Now I only emit `input` and `change` events.~~
+- Now, you can bind any native event on input !
+  ```html
+  <pattern-input
+                 ...
+                 @change="onChange"
+                 @blur="onBlur"
+                 @focus="onFocus"
+                 ...etc
+                 ...</pattern-input>
+  ```
+-Required:
+    - Vue: v2.4.0+, because it use [$listeners](https://vuejs.org/v2/api/#vm-listeners)
 
 ## Bugs and feature requests
 
