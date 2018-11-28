@@ -1,25 +1,25 @@
 {
-    "name": "vue-pattern-input",
-    "version": "2.0.3",
-    "description": "A Vue2.0 Component for limiting user input",
-    "main": "src/component/vue-pattern-input.vue",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/RoamIn/vue-pattern-input.git"
-    },
-    "keywords": [
-        "vue",
-        "input",
-        "pattern",
-        "RegExp"
-    ],
-    "author": "Live",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/RoamIn/vue-pattern-input/issues"
-    },
-    "homepage": "https://github.com/RoamIn/vue-pattern-input#readme",
-    "dependencies": {
-        "vue": "^2.2.0"
-    }
+  "name": "vue-pattern-input",
+  "version": "2.1.3",
+  "description": "A Vue2.0 Component for limiting user input",
+  "main": "src/component/vue-pattern-input.vue",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoamIn/vue-pattern-input.git"
+  },
+  "keywords": [
+    "vue",
+    "input",
+    "pattern",
+    "RegExp"
+  ],
+  "author": "Live",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RoamIn/vue-pattern-input/issues"
+  },
+  "homepage": "https://github.com/RoamIn/vue-pattern-input#readme",
+  "dependencies": {
+    "vue": "^2.4.0"
+  }
 }

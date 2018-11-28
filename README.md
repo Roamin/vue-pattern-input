@@ -17,9 +17,9 @@ Works like native input element, you can add `maxlength` `class` attributes. You
 
 ## Live demo
 
-Just click there: [Live Demo](http://htmlpreview.github.io/?https://github.com/RoamIn/vue-pattern-input/blob/master/view/demo.html).
+Just click there: [Live Demo](http://htmlpreview.github.io/?https://github.com/RoamIn/vue-pattern-input/blob/master/dist/index.html).
 
-![demo.gif](./src/img/demo.gif)
+![demo.gif](./dist/static/demo.gif)
 
 ## What's included
 
@@ -44,7 +44,7 @@ regExp | RegExp | null | false | Using for: String.prototype.replace(regexp, rep
 replacement | String | '' | false | Using for: String.prototype.replace(regexp, replacement)
 v-model[.number] | String/Number | | true | Using for getting input value
 
-## Commonly used regExp 
+## Commonly used regExp
 
 regExp|Description
 --- | --- |
@@ -82,13 +82,22 @@ setting: {
 
 > When you want get a Number, remember use `v-model.number`, and the safe maxlength is 15.
 
+
+## Changelog
+
+- v2.1.3
+    ~~I'm not sure is it necessary to emit all the input events. Now I only emit `input` and `change` events.~~
+    Now, you can bind any native event on input !
+    Required:
+    - Vue: v2.4.0+
+
 ## Bugs and feature requests
 
 Have a bug or a feature request? If your problem or idea is not addressed yet, [please open a new issue](https://github.com/RoamIn/vue-pattern-input/issues/new).
 
 ## Thought
 
-I'm not sure is it necessary to emit all the input events. Now I only emit `input` and `change` events.
+~~I'm not sure is it necessary to emit all the input events. Now I only emit `input` and `change` events.~~
 
 And I think the RegExp settings is not good enough, it's a bit awkward. Maybe I should match what I want instead of replacing what I don't want. But how ?
 
