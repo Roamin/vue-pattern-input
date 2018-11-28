@@ -41,11 +41,11 @@ export default {
         }
       })
 
-      return Object.assign(listeners, {
-        input: (e) => {
-          this.updateValue(e.target.value)
-        }
-      })
+      listeners.input = (e) => {
+        this.updateValue(e.target.value)
+      }
+
+      return listeners
     }
   },
   methods: {
