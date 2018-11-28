@@ -98,7 +98,7 @@ setting: {
                  ...etc
                  ...</pattern-input>
   ```
--Required:
+- Required:
     - Vue: v2.4.0+, because it use [$listeners](https://vuejs.org/v2/api/#vm-listeners)
 
 ## Bugs and feature requests
