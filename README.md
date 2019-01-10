@@ -1,5 +1,8 @@
 # vue-pattern-input
 
+[![npm package](https://img.shields.io/npm/v/vue-pattern-input.svg?style=flat-square)](https://www.npmjs.com/package/vue-pattern-input)
+[![NPM downloads](https://img.shields.io/npm/dw/vue-pattern-input.svg?style=flat-square)](http://npmjs.com/vue-pattern-input)
+
 A Vue2.0 Component used RegExp to limit the user's input.
 
 Works like native input element, you can add `maxlength` `class` attributes. You can use `v-model` too.
