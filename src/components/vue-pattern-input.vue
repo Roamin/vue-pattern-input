@@ -70,7 +70,6 @@ export default {
     // watch value prop
     value: {
       handler (val) {
-        console.log(val)
         if (val !== this.val) {
           this.updateValue(val)
         }
