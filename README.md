@@ -89,6 +89,10 @@ setting: {
 
 ## Changelog
 
+### v2.1.4
+
+- Use immediate watch
+
 ### v2.1.3
 - ~~I'm not sure is it necessary to emit all the input events. Now I only emit `input` and `change` events.~~
 - Now, you can bind any native event on input !
