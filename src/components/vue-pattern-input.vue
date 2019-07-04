@@ -6,9 +6,6 @@
 
 <script type="text/ecmascript-6">
 export default {
-  mounted () {
-    this.updateValue(this.value)
-  },
   name: 'vue-pattern-input',
   props: {
     value: {
@@ -67,19 +64,18 @@ export default {
     // emit input event
     emitInput (val) {
       this.$emit('input', val)
-    },
-
-    // emit change event
-    emitChange () {
-      this.$emit('change', this.val)
     }
   },
   watch: {
     // watch value prop
-    value (val) {
-      if (val !== this.val) {
-        this.updateValue(val)
-      }
+    value: {
+      handler (val) {
+        console.log(val)
+        if (val !== this.val) {
+          this.updateValue(val)
+        }
+      },
+      immediate: true
     }
   }
 }
