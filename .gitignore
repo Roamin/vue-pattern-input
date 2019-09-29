@@ -6,7 +6,6 @@
 .idea/
 .postcssrc.js
 
-index.html
 package-lock.json
 *.log*
 
@@ -15,6 +14,5 @@ build/
 node_modules/
 src/
 !src/components/
-static/
 asset/
 
