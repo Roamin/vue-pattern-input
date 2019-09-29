@@ -3,32 +3,35 @@
 [![npm package](https://img.shields.io/npm/v/vue-pattern-input.svg?style=flat-square)](https://www.npmjs.com/package/vue-pattern-input)
 [![NPM downloads](https://img.shields.io/npm/dw/vue-pattern-input.svg?style=flat-square)](http://npmjs.com/vue-pattern-input)
 
-A Vue2.0 Component used RegExp to limit the user's input.
+在 `input` 输入框上使用正则限制用户的输入。
 
-Works like native input element, you can add `maxlength` `class` attributes. You can use `v-model` too.
+和原生的输入框完全一致（除了会限制输入）：
+- 支持任意原生属性，比如： `maxlength` `class`
+- 支持 `v-model`
+- 支持所有的原生事件： `change`、`blur` 等等
 
-English | [简体中文](./README-zh_CN.md)
+简体中文 | [English](./README.md)
 
-## Table of contents
+## 目录
 
-- [Live Demo](#live-demo)
-- [What's included](#whats-included)
-- [Parameter declaration](#parameter-declaration)
-- [Quick start](#quick-start)
-- [Changelog](#changelog)
+- [在线 Demo](#在线-demo)
+- [项目结构](#项目结构)
+- [参数说明](#参数说明)
+- [快速开始](#快速开始)
+- [更新日志](#更新日志)
 - [Bugs and feature requests](#bugs-and-feature-requests)
-- [Thought](#thought)
+- [一些想法](#一些想法)
 - [License](#license)
 
-## Live demo
+## 在线 Demo
 
-Just click there: [Live Demo](http://htmlpreview.github.io/?https://github.com/RoamIn/vue-pattern-input/blob/master/dist/index.html).
+点击此处: [Live Demo](http://htmlpreview.github.io/?https://github.com/RoamIn/vue-pattern-input/blob/master/dist/index.html).
 
 ![demo.gif](./dist/static/demo.gif)
 
-## What's included
+## 项目结构
 
-Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
+项目目录结构如下：
 
 ```
 vue-pattern-input/
@@ -40,7 +43,7 @@ vue-pattern-input/
     └── demo.html
 ```
 
-## Parameter declaration
+## 参数说明
 
 
 Parameter|Type|Default|Required|Description
@@ -49,18 +52,18 @@ regExp | RegExp | null | false | Using for: String.prototype.replace(regexp, rep
 replacement | String | '' | false | Using for: String.prototype.replace(regexp, replacement)
 v-model[.number] | String/Number | | true | Using for getting input value
 
-## Commonly used regExp
+## 常见的正则
 
 regExp|Description
 --- | --- |
-/^[0\D]\*\|\D*/g | positive integer
-/[^a-z]/g | lowercase
-/[^A-Z]/g | uppercase
-/[^\w]/g | \w, Equivalent to [A-Za-z0-9_]
-/[^\u4e00-\u9fa5]/g | Chinese
+/^[0\D]\*\|\D*/g | 只能输入正整数
+/[^a-z]/g | 只能输入小写字母
+/[^A-Z]/g | 只能输入大写字母
+/[^\w]/g | 只能输入 \w, 即 [A-Za-z0-9_]
+/[^\u4e00-\u9fa5]/g | 只能输入中文
 
 
-## Quick start
+## 快速开始
 
 #### JavaScript
 
@@ -88,7 +91,7 @@ setting: {
 > When you want get a Number, remember use `v-model.number`, and the safe maxlength is 15.
 
 
-## Changelog
+## 更新日志
 
 ### v2.1.4
 
@@ -113,14 +116,11 @@ setting: {
 
 Have a bug or a feature request? If your problem or idea is not addressed yet, [please open a new issue](https://github.com/RoamIn/vue-pattern-input/issues/new).
 
-## Thought
+## 一些想法
 
 ~~I'm not sure is it necessary to emit all the input events. Now I only emit `input` and `change` events.~~
 
-And I think the RegExp settings is not good enough, it's a bit awkward. Maybe I should match what I want instead of replacing what I don't want. But how ?
-
-When I want to limit number range, it not convenient. In this condition, maybe create a [number-input](https://github.com/RoamIn/vue-custom-input) will be a good solution.
-
+我觉得现在这种正则限制输入并不是很好，感觉怪怪的。 可能所需要写的正则是去除所不需要的字符，而不是所需要的字符吧。
 
 ## License
 
