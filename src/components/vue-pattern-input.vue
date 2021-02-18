@@ -1,14 +1,12 @@
 <template>
-  <input v-on="listeners"
-         v-model="val"
-         ref="input">
+  <input v-model="val" @input="updateValue($event.target.value)" />
 </template>
 
-<script type="text/ecmascript-6">
+<script>
 export default {
   name: 'vue-pattern-input',
   props: {
-    value: {
+    modelValue: {
       required: true,
       type: [Number, String]
     },
@@ -23,26 +21,10 @@ export default {
       default: ''
     }
   },
+  emits: ['update:modelValue'],
   data () {
     return {
       val: ''
-    }
-  },
-  computed: {
-    listeners () {
-      const listeners = {}
-
-      Object.keys(this.$listeners).forEach(fnName => {
-        listeners[fnName] = (e) => {
-          this.$listeners[fnName](e.target.value)
-        }
-      })
-
-      listeners.input = (e) => {
-        this.updateValue(e.target.value)
-      }
-
-      return listeners
     }
   },
   methods: {
@@ -63,13 +45,13 @@ export default {
 
     // emit input event
     emitInput (val) {
-      this.$emit('input', val)
+      this.$emit('update:modelValue', val)
     }
   },
   watch: {
     // watch value prop
-    value: {
-      handler (val) {
+    modelValue: {
+      handler (val = '') {
         if (val !== this.val) {
           this.updateValue(val)
         }
@@ -79,6 +61,3 @@ export default {
   }
 }
 </script>
-
-<style>
-</style>

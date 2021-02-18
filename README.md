@@ -3,7 +3,7 @@
 [![npm package](https://img.shields.io/npm/v/vue-pattern-input.svg?style=flat-square)](https://www.npmjs.com/package/vue-pattern-input)
 [![NPM downloads](https://img.shields.io/npm/dw/vue-pattern-input.svg?style=flat-square)](http://npmjs.com/vue-pattern-input)
 
-A Vue2.0 Component used RegExp to limit the user's input.
+A Vue Component used RegExp to limit the user's input.
 
 Works like native input element, you can add `maxlength` `class` attributes. You can use `v-model` too.
 
@@ -22,9 +22,7 @@ English | [简体中文](./README-zh_CN.md)
 
 ## Live demo
 
-Just click there: [Live Demo](http://htmlpreview.github.io/?https://github.com/RoamIn/vue-pattern-input/blob/master/dist/index.html).
-
-![demo.gif](./dist/static/demo.gif)
+Just click there: [Live Demo](https://dp31h.csb.app/).
 
 ## What's included
 
@@ -90,6 +88,10 @@ setting: {
 
 ## Changelog
 
+### v3.0.0
+
+- Support Vue3.0
+
 ### v2.1.4
 
 - Use immediate watch
@@ -118,8 +120,6 @@ Have a bug or a feature request? If your problem or idea is not addressed yet, [
 ~~I'm not sure is it necessary to emit all the input events. Now I only emit `input` and `change` events.~~
 
 And I think the RegExp settings is not good enough, it's a bit awkward. Maybe I should match what I want instead of replacing what I don't want. But how ?
-
-When I want to limit number range, it not convenient. In this condition, maybe create a [number-input](https://github.com/RoamIn/vue-custom-input) will be a good solution.
 
 
 ## License

@@ -25,9 +25,7 @@
 
 ## 在线 Demo
 
-点击此处: [Live Demo](http://htmlpreview.github.io/?https://github.com/RoamIn/vue-pattern-input/blob/master/dist/index.html).
-
-![demo.gif](./dist/static/demo.gif)
+点击此处: [Live Demo](https://dp31h.csb.app/).
 
 ## 项目结构
 
@@ -92,6 +90,10 @@ setting: {
 
 
 ## 更新日志
+
+### v3.0.0
+
+- 支持 Vue3.0
 
 ### v2.1.4
 

@@ -1,7 +1,7 @@
 {
   "name": "vue-pattern-input",
-  "version": "2.1.4",
-  "description": "A Vue2.0 Component for limiting user input",
+  "version": "3.0.0",
+  "description": "A Vue Component for limiting user input",
   "main": "src/components/vue-pattern-input.vue",
   "repository": {
     "type": "git",
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/RoamIn/vue-pattern-input#readme",
   "dependencies": {
-    "vue": "^2.4.0"
+    "vue": "^3.0.0"
   }
 }
