@@ -1,7 +1,7 @@
 # vue-pattern-input
 
 [![npm package](https://img.shields.io/npm/v/vue-pattern-input.svg?style=flat-square)](https://www.npmjs.com/package/vue-pattern-input)
-[![NPM downloads](https://img.shields.io/npm/dw/vue-pattern-input.svg?style=flat-square)](http://npmjs.com/vue-pattern-input)
+[![NPM downloads](https://img.shields.io/npm/dm/vue-pattern-input.svg?style=flat-square)](http://npmjs.com/vue-pattern-input)
 
 A Vue Component used RegExp to limit the user's input.
 
@@ -90,7 +90,7 @@ setting: {
 
 ### v3.0.0
 
-- Support Vue3.0
+- v3.0.0 provides Vue 3 support. You can still use v2.x for Vue 2.
 
 ### v2.1.4
 

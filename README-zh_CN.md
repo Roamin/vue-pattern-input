@@ -1,7 +1,7 @@
 # vue-pattern-input
 
 [![npm package](https://img.shields.io/npm/v/vue-pattern-input.svg?style=flat-square)](https://www.npmjs.com/package/vue-pattern-input)
-[![NPM downloads](https://img.shields.io/npm/dw/vue-pattern-input.svg?style=flat-square)](http://npmjs.com/vue-pattern-input)
+[![NPM downloads](https://img.shields.io/npm/dm/vue-pattern-input.svg?style=flat-square)](http://npmjs.com/vue-pattern-input)
 
 在 `input` 输入框上使用正则限制用户的输入。
 
@@ -93,7 +93,7 @@ setting: {
 
 ### v3.0.0
 
-- 支持 Vue3.0
+- v3.0.0 开始支持 Vue3.0；如果使用 Vue2.x 请切到 v2.x
 
 ### v2.1.4
 
